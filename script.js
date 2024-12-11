@@ -15,14 +15,14 @@ document.addEventListener('DOMContentLoaded', () => {
   
     // Hero typing animation
     const texts = [
-      { id: 'hero-heading', text: "Hi, I'm Taryn," },
-      { id: 'hero-paragraph', text: 'an aspiring full-stack developer using technology for good.' },
-      { id: 'hero-small', text: 'Interests: Cybersecurity, Machine Learning, AI' }
+      { id: 'hero-heading', text: "Hi, I'm Taryn Beaupré." },
+      { id: 'hero-paragraph', text: 'A full-stack developer using technology for good.' },
+      { id: 'hero-small', text: 'Interests: Cybersecurity & Machine Learning.' }
     ];
   
     const typeText = (elementId, text, delay = 50) => {
       const element = document.getElementById(elementId);
-      element.style.opacity = 1; // Make it visible
+      element.style.opacity = 1;
       let index = 0;
   
       const typeInterval = setInterval(() => {
@@ -58,5 +58,16 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     
     window.addEventListener('scroll', handleScroll);
+
+    const downloadButton = document.getElementById('download-pdf');
+    downloadButton.addEventListener('click', () => {
+        const pdfUrl = './files/BeaupreTaryn.pdf';
+        const link = document.createElement('a');
+        link.href = pdfUrl;
+        link.download = 'CV_Taryn_Beaupre.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link); // Remove the link after clicking to clean up
+    });
   });
   

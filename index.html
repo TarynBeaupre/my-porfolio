@@ -10,13 +10,13 @@
     <!-- NAV -->
     <header>
         <nav>
-            <button id="menu-toggle"" aria-label="Toggle menu">&#9776;</button>
+            <button id="menu-toggle">&#9776;</button>
           <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About Me</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#techstack">Tech Stack</a></li>
-            <li><a href="#experience">Experience</a></li>
+            <li><a href="#experience">Experience and CV</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
@@ -26,60 +26,220 @@
     <section id="home" class="hero">
         <div class="stars"></div>
         <div class="hero-content">
-            <h1 id="hero-heading" class="hover-switch"></h1>
-            <p id="hero-paragraph"></p>
-            <small id="hero-small"></small>
+            <h1 id="hero-heading"></h1>
+            <h2 id="hero-paragraph"></h2>
+            <h3 id="hero-small"></h3>
             <div class="contact-hero">
-                <a href="mailto:beaupretaryn@gmail.com" class="contact-button">Email</a>
-                <a href="#contact" class="contact-button">LinkedIn</a>
-                <a href="#contact" class="contact-button">Github</a>
+                <a href="mailto:beaupretaryn@gmail.com"><img src="./images/mail-with-circle.svg" alt="Email"></a>
+                <a href="https://www.linkedin.com/in/taryn-beaupre/"><img src="./images/linkedin-124.svg" alt="LinkedIn logo"></a>
+                <a href="https://github.com/TarynBeaupre"><img src="./images/github.svg" alt="GitHub logo"></a>
             </div>
         </div>
     </section>
     
     <!-- ABOUT -->
-    <section class="about">
+    <section id="about" class="about">
         <h2>About Me</h2>
-        <p>Hello! I’m a developer passionate about crafting impactful solutions using modern technology.</p>
+        <div class="content">
+            <div class="grid-container">
+                <div class="image">
+                    <img src="./images/me.jpg" alt="A picture of me!">
+                </div>
+                <div class="text">
+                    <h3>Hi there,</h3>
+                    <p> I’m a developer passionate about crafting impactful solutions using modern technology. 
+                        From a young age I have been fascinated with the inner workings of electronics and the incredible innovative potential of technology.
+                        </br></br>I am currently completing a three year technical DEC in Computer Science at John Abbott College.
+                        I plan on attending university for Computer Science as well. 
+                    </p>  
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- PROJECTS -->
     <section id="projects">
         <h2>Projects</h2>
-        <div class="carousel">
-            <div class="carousel-item">Project 1</div>
-            <div class="carousel-item">Project 2</div>
-            <div class="carousel-item">Project 3</div>
+        <div class="projects">
+            <div class="project">
+                <h3>MOOd</h3>
+                <img src="./images/MOOd.jpg" alt="A cow logo.">
+                <p>MOOd is a kotlin application with the cutest little cow friend that lets you input your daily mood, give you AI-powered suggestions to support you, and manage a simple user account. The app has multiple themes the user can pick from, and provides a comforting safe space for users to journal their feelings.</p>
+                <p>Key Features:</p>
+                <ul>
+                    <li>User authentication.</li>
+                    <li>AI-powered messaging.</li>
+                    <li>Mood tracking with a historical log.</li>
+                </ul>
+                <p>Techstack: Kotlin, Gemini AI, Android Room Library.</p>
+                <a class="project-github-link" href="https://github.com/ryanwiwcharyk/MOOd"><img src="./images/github.svg" alt="GitHub logo"> View Repository </a>
+            </div>
+
+            <div class="project">
+                <h3>PortPanda</h3>
+                <img src="./images/MOOd.jpg" alt="A cow logo.">
+                <p>MOOd is a kotlin application with the cutest little cow friend that lets you input your daily mood, give you AI-powered suggestions to support you, and manage a simple user account. The app has multiple themes the user can pick from, and provides a comforting safe space for users to journal their feelings.</p>
+                <p>Key Features:</p>
+                <ul>
+                    <li>Video Game Search</li>
+                    <li>Wishlist: Users can add a video game to their wishlist to access it anytime.</li>
+                    <li>ideo Game Reviewing: Users can leave reviews and interact with other user reviews.</li>
+                </ul>
+                <p>Techstack: TypeScript, Handlebars, HTML, CSS.</p>
+                <a class="project-github-link" href="https://github.com/TarynBeaupre/PortPanda"><img src="./images/github.svg" alt="GitHub logo"> View Repository </a>
+            </div>
+
+            <div class="project">
+                <h3>VideoGamed</h3>
+                <img src="./images/MOOd.jpg" alt="A cow logo.">
+                <p></p>
+                <p>Key Features:</p>
+                <ul>
+                    <li>Video Game Search</li>
+                    <li>Wishlist: Users can add a video game to their wishlist to access it anytime.</li>
+                    <li>ideo Game Reviewing: Users can leave reviews and interact with other user reviews.</li>
+                </ul>
+                <p>Techstack: TypeScript, Handlebars, HTML, CSS.</p>
+                <a class="project-github-link" href=" https://github.com/TarynBeaupre/VideoGamed"><img src="./images/github.svg" alt="GitHub logo"> View Repository </a>
+            </div>
+
+            <div>
+                <h3>ASLingo</h3>
+                <img src="./images/MOOd.jpg" alt="A cow logo.">
+                <p></p>
+                <p>Key Features:</p>
+                <ul>
+                    <li>Video Game Search</li>
+                    <li>Wishlist: Users can add a video game to their wishlist to access it anytime.</li>
+                    <li>ideo Game Reviewing: Users can leave reviews and interact with other user reviews.</li>
+                </ul>
+                <p>Techstack: TypeScript, Handlebars, HTML, CSS.</p>
+                <a class="project-github-link" href=" https://github.com/TarynBeaupre/VideoGamed"><img src="./images/github.svg" alt="GitHub logo"> View Repository </a>
+            </div>
+
+            <div>
+                <h3>Something?</h3>
+                <img src="./images/MOOd.jpg" alt="A cow logo.">
+                <p>MOOd is a kotlin application with the cutest little cow friend that lets you input your daily mood, give you AI-powered suggestions to support you, and manage a simple user account. The app has multiple themes the user can pick from, and provides a comforting safe space for users to journal their feelings.</p>
+                <p>Key Features:</p>
+                <ul>
+                    <li>Video Game Search</li>
+                    <li>Wishlist: Users can add a video game to their wishlist to access it anytime.</li>
+                    <li>ideo Game Reviewing: Users can leave reviews and interact with other user reviews.</li>
+                </ul>
+                <p>Techstack: TypeScript, Handlebars, HTML, CSS.</p>
+                <a class="project-github-link" href=" https://github.com/TarynBeaupre/VideoGamed"><img src="./images/github.svg" alt="GitHub logo"> View Repository </a>
+            </div>
+
+            <div>
+                <h3>Home Calendar</h3>
+                <img src="./images/MOOd.jpg" alt="A cow logo.">
+                <p>This project is a sleek and user-friendly calendar application built in C# with a WPF UI. It allows users to manage their events stored in a SQLite database effortlessly.</p>
+                <p>Key Features:</p>
+                <ul>
+                    <li>Event Management: Add, delete, update, and view events with ease.</li>
+                    <li>Category Management: Organize your events by adding categories and assigning them to events.</li>
+                    <li>Flexible User Interface: Users can interact with the UI to seamlessly manage events and categories.</li>
+                    <li>Agile Development: Developed using Agile methodology, ensuring flexibility and responsiveness to user needs</li>
+                </ul>
+                <p>Techstack: TypeScript, Handlebars, HTML, CSS.</p>
+                <a class="project-github-link" href="https://github.com/TarynBeaupre/HomeCalendar-dotnetjets"><img src="./images/github.svg" alt="GitHub logo"> View Repository </a>
+            </div>
+
+           
         </div>
     </section>
 
     <section id="techstack">
         <h2>Tech Stack</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>Node.js</li>
-        </ul>
+        <div class=content>
+            <div class="techstack-list">
+                <div>
+                   <h3>Languages</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Typescript</li>
+                    <li>C#</li>
+                    <li>SQL</li>
+                    <li>Python</li>
+                    <li>PortgreSQL</li>
+                    <li>SQLite</li>
+                    <li>Kotlin</li>
+                </ul>  
+                </div>
+                <div>
+                   <h3>Frameworks and Libraries</h3>
+                <ul>
+                    <li>Django</li>
+                    <li>Node.js</li>
+                    <li>ASP.NET Core</li>
+                    <li>.NET MAUI</li>
+                </ul> 
+                </div>
+               
+                <div>
+                    <h3>Proficiencies</h3>
+                <ul>
+                    <li>Linux</li>
+                    <li>Bash</li>
+                    <li>MacOS</li>
+                    <li>Windows</li>
+                    <li>Powershell</li>
+                    <li>Docker</li>
+                    <li>Redis</li>
+                    <li>GitHub</li>
+                    <li>Agile/Scrum</li>
+                    <li>Jira</li>
+                    <li>Azure DevOps</li>
+                    <li>CI/CD</li>
+                </ul>  
+                </div>
+                
+            </div>
+        </div>
     </section>
     
     <section id="experience">
         <h2>Experience</h2>
-        <p>Details about my professional experience will go here.</p>
+        <div class="content">
+            <div class="grid-container">
+                <div class="image">
+                  <img src="./images/bell.jpg" alt="Bell" />
+                </div>
+                <div class="text">
+                    <div class="experience-title">
+                            <h3 style="text-align: center;">Cybersecurity Developer Intern <span style="font-size: x-small;">May 2024 - August 2024</span></h3>
+                            <p>Bell Canada<em></em> </p>
+                    </div>
+
+                  <p>My first internship ever. </p>
+                </div>
+            </div>
+
+            <p>Details about my professional experience will go here.</p>
+            <div>
+                <p>Check out my detailed experience and projects in the PDF below.</p>
+                <button id="download-pdf" class="download-btn">Download My Resume</button>   
+            </div>
+        </div>
     </section>
 
-    <footer>
+    <footer id="contact">
         <div class="footer-content">
           <p>Last Updated: <span id="last-updated"></span></p>
           <div id="contact">
             <h3>Contact Me</h3>
-            <p>Email: <a href="mailto:beaupretaryn@gmail.com">beaupretaryn@gmail.com</a></p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/tarynbeaupre" target="_blank">linkedin.com/in/tarynbeaupre</a></p>
-          </div>
+            <a class="contact-button" href="mailto:beaupretaryn@gmail.com">Email</a>
+            <a class="contact-button" href="https://linkedin.com/in/tarynbeaupre" target="_blank">LinkedIn</a>
+            <small>All Rights Reserved Taryn Beaupré</small>
+        </div>
         </div>
     </footer>
     
     <script src="script.js"></script>
+    <script src="star-script.js"></script>
+
 </body>
 </html>
