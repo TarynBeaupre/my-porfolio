@@ -39,7 +39,7 @@ body.lightened .stars {
 body.scrolled .stars {
     opacity: 1;
     transition: opacity 1s ease-out;
-  }
+}
 
 header {
     z-index: 9999;
@@ -80,6 +80,7 @@ nav ul {
     list-style: none;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
@@ -229,29 +230,39 @@ body.lightened section, body.lightened footer {
     color: #333;
 }
 
-
-
 /* About */
 .about .content{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-}
-.about img {
-    padding: 10px;
+    padding: 20px;
 }
 
-section .grid-container {
+.about h3 {
+    margin-top: 0px;
+}
+
+.grid-container {
     display: grid;
     grid-template-columns: 1fr 3fr;
-    gap: 16px;
+    gap: 20px;
 }
 
-section .image img{
+.about .image {
+    grid-column: 1;
+    align-self: center;
+}
+
+.about .image img {
     width: 100%;
     height: auto;
+    border-radius: 8px;
 }
+
+.about .text {
+    grid-column: 2;
+  }
 
 .experience-title h3 {
     margin-bottom: 0px;
@@ -262,13 +273,18 @@ section .image img{
     margin-bottom: 3px;
 }
 
+.experience-item {
+    border-bottom: 1px solid #ddd; /* Add a horizontal line to separate experience items */
+    padding-bottom: 20px; /* Add space below each experience item */
+  }
+
 .techstack-list {
     display: flex;
     flex-wrap: wrap;
 }
 
 .skill {
-    font-size: 14px;
+    font-size: 18px;
     margin: 4px;
     padding: 3px 5px;
     border-radius: 3px;
@@ -281,6 +297,7 @@ section .image img{
 
 /* Experience */
 .download-btn {
+    font-family: 'Work Sans', Arial, sans-serif;
     background-color: #f46786;
     color: white;
     padding: 10px 20px;
