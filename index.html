@@ -8,18 +8,19 @@
 </head>
 <body>
     <!-- NAV -->
-    <header>
+    <header id="header">
+        <h3 style="color:#444">Taryn Beaupré</h3>
         <nav>
             <button id="menu-toggle">&#9776;</button>
           <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About Me</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#techstack">Tech Stack</a></li>
-            <li><a href="#experience">Experience and CV</a></li>
+            <li><a href="#techstack">Skills</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
+        <button id="download-pdf" class="download-btn">Download My Resume</button>  
     </header>
 
     <!-- HERO -->
@@ -34,24 +35,37 @@
                 <a href="https://www.linkedin.com/in/taryn-beaupre/"><img src="./images/linkedin-124.svg" alt="LinkedIn logo"></a>
                 <a href="https://github.com/TarynBeaupre"><img src="./images/github.svg" alt="GitHub logo"></a>
             </div>
+           
+            <div class="scroll-arrow">
+                <svg width="24" height="24">
+                    <path d="M12 20L4 2L20 2Z" fill="#fff" />
+                </svg>
+            </div>
         </div>
     </section>
+
     
+
     <!-- ABOUT -->
     <section id="about" class="about">
         <h2>About Me</h2>
         <div class="content">
             <div class="grid-container">
                 <div class="image">
-                    <img src="./images/me.jpg" alt="A picture of me!">
+                    <img src="./images/me-2.jpg" alt="A picture of me!">
                 </div>
                 <div class="text">
                     <h3>Hi there,</h3>
-                    <p> I’m a developer passionate about crafting impactful solutions using modern technology. 
-                        From a young age I have been fascinated with the inner workings of electronics and the incredible innovative potential of technology.
-                        </br></br>I am currently completing a three year technical DEC in Computer Science at John Abbott College.
+                    <p> I’m a developer passionate about crafting impactful solutions using modern technology. I'm based in <strong>Montreal, Canada</strong>.
+                        From a young age, I have been fascinated with the inner workings of electronics and the incredible innovative potential of technology.
+                        </br></br>
+                        My childhood curiosity has since culminated in a love for programming and development of technology. In my spare time, 
+                        I love to play <strong>video games</strong>, art and spend time with my two lovely pets and my family.
+                        </br></br>
+                        I am currently completing a three year technical DEC in Computer Science at John Abbott College.
                         I plan on attending university for Computer Science as well. 
                     </p>  
+                    <p>Check out my detailed experience and projects in the PDF below.</p>
                 </div>
             </div>
         </div>
@@ -61,142 +75,96 @@
     <section id="projects">
         <h2>Projects</h2>
         <div class="projects">
-            <div class="project">
+            <div class="project" style="grid-column-start: 1; grid-row-start: 1;">
                 <h3>MOOd</h3>
-                <img src="./images/MOOd.jpg" alt="A cow logo.">
-                <p>MOOd is a kotlin application with the cutest little cow friend that lets you input your daily mood, give you AI-powered suggestions to support you, and manage a simple user account. The app has multiple themes the user can pick from, and provides a comforting safe space for users to journal their feelings.</p>
-                <p>Key Features:</p>
-                <ul>
-                    <li>User authentication.</li>
-                    <li>AI-powered messaging.</li>
-                    <li>Mood tracking with a historical log.</li>
-                </ul>
-                <p>Techstack: Kotlin, Gemini AI, Android Room Library.</p>
-                <a class="project-github-link" href="https://github.com/ryanwiwcharyk/MOOd"><img src="./images/github.svg" alt="GitHub logo"> View Repository </a>
+                <video autoplay loop muted class="project-image"><source src="./images/MOOd.mp4">Your browser does not support the video tag.</video>
+                <div>
+                    <p>MOOd is a kotlin application with the cutest little cow friend that lets you input your daily mood, give you AI-powered suggestions to support you, and manage a simple user account. The app provides a comforting safe space for users to journal their feelings.</p>
+                </div>
+                <div class="techstack-list">
+                    <span class="skill" style="background: #8644dd;">Kotlin</span>
+                    <span class="skill" style="background: #8644dd;">Gemini API</span>
+                    <span class="skill" style="background: #8644dd;">Android Room Library</span>
+                </div>
+                <a class="project-overlay" href="https://github.com/ryanwiwcharyk/MOOd"><img style="width:15px; height:15px;" src="./images/github-white.svg" alt="GitHub logo"> View Repository </a>
             </div>
 
             <div class="project">
                 <h3>PortPanda</h3>
-                <img src="./images/MOOd.jpg" alt="A cow logo.">
-                <p>MOOd is a kotlin application with the cutest little cow friend that lets you input your daily mood, give you AI-powered suggestions to support you, and manage a simple user account. The app has multiple themes the user can pick from, and provides a comforting safe space for users to journal their feelings.</p>
-                <p>Key Features:</p>
-                <ul>
-                    <li>Video Game Search</li>
-                    <li>Wishlist: Users can add a video game to their wishlist to access it anytime.</li>
-                    <li>ideo Game Reviewing: Users can leave reviews and interact with other user reviews.</li>
-                </ul>
-                <p>Techstack: TypeScript, Handlebars, HTML, CSS.</p>
-                <a class="project-github-link" href="https://github.com/TarynBeaupre/PortPanda"><img src="./images/github.svg" alt="GitHub logo"> View Repository </a>
+                <img class="project-image" src="./images/PortPanda.png" alt="A cow logo.">
+                <p>PortPanda is an educational tool that allows users to scan ports of an ip and retrieve information based on the results retrieved such as details about each open port, the OS version and the count of closed ports.</p>
+                <div class="techstack-list">
+                    <span class="skill" style="background: #8644dd;">Python</span>
+                    <span class="skill" style="background: #8644dd;">Flask</span>
+                    <span class="skill" style="background: #8644dd;">nmap</span>
+                    <span class="skill" style="background: #8644dd;">HTML</span>
+
+                </div>
+                <a class="project-overlay" href="https://github.com/TarynBeaupre/PortPanda"><img style="width:15px; height:15px;" src="./images/github-white.svg" alt="GitHub logo"> View Repository </a>
             </div>
 
             <div class="project">
                 <h3>VideoGamed</h3>
-                <img src="./images/MOOd.jpg" alt="A cow logo.">
+                <img class="project-image" src="./images/MOOd.jpg" alt="A cow logo.">
                 <p></p>
-                <p>Key Features:</p>
-                <ul>
-                    <li>Video Game Search</li>
-                    <li>Wishlist: Users can add a video game to their wishlist to access it anytime.</li>
-                    <li>ideo Game Reviewing: Users can leave reviews and interact with other user reviews.</li>
-                </ul>
-                <p>Techstack: TypeScript, Handlebars, HTML, CSS.</p>
-                <a class="project-github-link" href=" https://github.com/TarynBeaupre/VideoGamed"><img src="./images/github.svg" alt="GitHub logo"> View Repository </a>
+                <div class="techstack-list">
+                    <span class="skill" style="background: #8644dd;">TypeScript</span>
+                    <span class="skill" style="background: #8644dd;">Handlebars</span>
+                    <span class="skill" style="background: #8644dd;">HTML</span>
+                    <span class="skill" style="background: #8644dd;">CSS</span>
+                </div>
+                <a class="project-overlay" href=" https://github.com/TarynBeaupre/VideoGamed"><img style="width:15px; height:15px;" src="./images/github-white.svg" alt="GitHub logo"> View Repository </a>
             </div>
 
-            <div>
-                <h3>ASLingo</h3>
-                <img src="./images/MOOd.jpg" alt="A cow logo.">
-                <p></p>
-                <p>Key Features:</p>
-                <ul>
-                    <li>Video Game Search</li>
-                    <li>Wishlist: Users can add a video game to their wishlist to access it anytime.</li>
-                    <li>ideo Game Reviewing: Users can leave reviews and interact with other user reviews.</li>
-                </ul>
-                <p>Techstack: TypeScript, Handlebars, HTML, CSS.</p>
-                <a class="project-github-link" href=" https://github.com/TarynBeaupre/VideoGamed"><img src="./images/github.svg" alt="GitHub logo"> View Repository </a>
-            </div>
-
-            <div>
-                <h3>Something?</h3>
-                <img src="./images/MOOd.jpg" alt="A cow logo.">
-                <p>MOOd is a kotlin application with the cutest little cow friend that lets you input your daily mood, give you AI-powered suggestions to support you, and manage a simple user account. The app has multiple themes the user can pick from, and provides a comforting safe space for users to journal their feelings.</p>
-                <p>Key Features:</p>
-                <ul>
-                    <li>Video Game Search</li>
-                    <li>Wishlist: Users can add a video game to their wishlist to access it anytime.</li>
-                    <li>ideo Game Reviewing: Users can leave reviews and interact with other user reviews.</li>
-                </ul>
-                <p>Techstack: TypeScript, Handlebars, HTML, CSS.</p>
-                <a class="project-github-link" href=" https://github.com/TarynBeaupre/VideoGamed"><img src="./images/github.svg" alt="GitHub logo"> View Repository </a>
-            </div>
-
-            <div>
+            <div class="project">
                 <h3>Home Calendar</h3>
-                <img src="./images/MOOd.jpg" alt="A cow logo.">
+                <video autoplay loop muted class="project-image"><source src="./images/HomeCalendar.mp4">Your browser does not support the video tag.</video>
                 <p>This project is a sleek and user-friendly calendar application built in C# with a WPF UI. It allows users to manage their events stored in a SQLite database effortlessly.</p>
-                <p>Key Features:</p>
-                <ul>
-                    <li>Event Management: Add, delete, update, and view events with ease.</li>
-                    <li>Category Management: Organize your events by adding categories and assigning them to events.</li>
-                    <li>Flexible User Interface: Users can interact with the UI to seamlessly manage events and categories.</li>
-                    <li>Agile Development: Developed using Agile methodology, ensuring flexibility and responsiveness to user needs</li>
-                </ul>
-                <p>Techstack: TypeScript, Handlebars, HTML, CSS.</p>
-                <a class="project-github-link" href="https://github.com/TarynBeaupre/HomeCalendar-dotnetjets"><img src="./images/github.svg" alt="GitHub logo"> View Repository </a>
+                <p>Techstack: Windows WPF, Handlebars, HTML, CSS.</p>
+                <div class="techstack-list">
+                    <span class="skill" style="background: #8644dd;">C#</span>
+                    <span class="skill" style="background: #8644dd;">WPF</span>
+                    <span class="skill" style="background: #8644dd;">SQLite</span>
+                </div>
+                <a class="project-overlay" href="https://github.com/TarynBeaupre/HomeCalendar-dotnetjets"><img style="width:15px; height:15px;" src="./images/github-white.svg" alt="GitHub logo"> View Repository </a>
             </div>
-
-           
+        </div>
+        <div class="project" style="height: 100px">
+            <h3>More Projects Coming Soon!</h3>
+            <p>I'm constantly working on new things. <a href="https://github.com/TarynBeaupre">Connect</a> with me on GitHub to get updated!</p>
         </div>
     </section>
 
     <section id="techstack">
-        <h2>Tech Stack</h2>
+        <h2>Skills</h2>
         <div class=content>
             <div class="techstack-list">
-                <div>
-                   <h3>Languages</h3>
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>Typescript</li>
-                    <li>C#</li>
-                    <li>SQL</li>
-                    <li>Python</li>
-                    <li>PortgreSQL</li>
-                    <li>SQLite</li>
-                    <li>Kotlin</li>
-                </ul>  
+                <span class="skill" style="background: #592ed9;">C#</span>
+                <span class="skill" style="background: #3c5e90;">Python</span>
+                <span class="skill" style="background: #3b36c3;">Typescript</span>
+                <span class="skill" style="background: #c8d02c;">JavaScript</span>
+                <span class="skill" style="background: #f97144;">HTML</span>
+                <span class="skill" style="background: #3497de;">CSS</span>
+                <span class="skill" style="background: #32a325;">SQL</span>
+                <span class="skill" style="background: #5488b8;">PostgreSQL</span>
+                <span class="skill" style="background: #367fd2;">SQLite</span>
+                <span class="skill" style="background: #8644dd;">Kotlin</span>
+                <span class="skill" style="background: #0b3e27;">Django</span>
+                <span class="skill" style="background: #3959b2;">Docker</span>
+                <span class="skill" style="background: #3db04b;">Node.js</span>
+                <span class="skill" style="background: #e94141;">REST APIs</span>
+                <span class="skill" style="background: #e94141;">ASP.NET Core</span>
+                <span class="skill" style="background: #e94141;">.NET MAUI</span>
+                <span class="skill" style="background: #e94141;">Linux</span>
+                <span class="skill" style="background: #e94141;">Bash</span>
+                <span class="skill" style="background: #e94141;">Powershell</span>
+                <span class="skill" style="background: #e94141;">MacOS</span>
+                <span class="skill" style="background: #e94141;">Windows</span>
+                <span class="skill" style="background: #e94141;">MacOS</span>
+                <span class="skill" style="background: #e94141;">Redis</span>
+                <span class="skill" style="background: #e94141;">Jira</span>
+                <span class="skill" style="background: #e94141;">Git</span>
                 </div>
-                <div>
-                   <h3>Frameworks and Libraries</h3>
-                <ul>
-                    <li>Django</li>
-                    <li>Node.js</li>
-                    <li>ASP.NET Core</li>
-                    <li>.NET MAUI</li>
-                </ul> 
-                </div>
-               
-                <div>
-                    <h3>Proficiencies</h3>
-                <ul>
-                    <li>Linux</li>
-                    <li>Bash</li>
-                    <li>MacOS</li>
-                    <li>Windows</li>
-                    <li>Powershell</li>
-                    <li>Docker</li>
-                    <li>Redis</li>
-                    <li>GitHub</li>
-                    <li>Agile/Scrum</li>
-                    <li>Jira</li>
-                    <li>Azure DevOps</li>
-                    <li>CI/CD</li>
-                </ul>  
-                </div>
-                
             </div>
         </div>
     </section>
@@ -205,9 +173,6 @@
         <h2>Experience</h2>
         <div class="content">
             <div class="grid-container">
-                <div class="image">
-                  <img src="./images/bell.jpg" alt="Bell" />
-                </div>
                 <div class="text">
                     <div class="experience-title">
                             <h3 style="text-align: center;">Cybersecurity Developer Intern <span style="font-size: x-small;">May 2024 - August 2024</span></h3>
@@ -218,23 +183,38 @@
                 </div>
             </div>
 
-            <p>Details about my professional experience will go here.</p>
-            <div>
-                <p>Check out my detailed experience and projects in the PDF below.</p>
-                <button id="download-pdf" class="download-btn">Download My Resume</button>   
+            <div class="experience-item">
+                <h3>Developer at UDEM</h3> 
+            </div>
+
+            <div class="experience-item">
+               <h3>Director of Promotions and Tech Design</h3> 
+               <small>Canadian University Software Engineering Conference (CUSEC)</small>
+               <p>
+                Leading the promotions and marketing operations for the conference by designing and creating media content
+                and developing the conference website for mobile and desktop.
+                Guiding 15+ Canadian university students to centralize the conference image across all of Canada.
+            </p>
+               
+            </div>
+
+            <div class="experience-item">
+                <h3>Computer Science Tutor</h3> 
             </div>
         </div>
     </section>
 
     <footer id="contact">
         <div class="footer-content">
-          <p>Last Updated: <span id="last-updated"></span></p>
-          <div id="contact">
-            <h3>Contact Me</h3>
-            <a class="contact-button" href="mailto:beaupretaryn@gmail.com">Email</a>
-            <a class="contact-button" href="https://linkedin.com/in/tarynbeaupre" target="_blank">LinkedIn</a>
-            <small>All Rights Reserved Taryn Beaupré</small>
-        </div>
+          <div id="contact" >
+            <h3 style="margin-bottom:0px;">Contact Me</h3>
+            <div class="contact" style="margin-top: 0px;">
+                <a href="mailto:beaupretaryn@gmail.com"><img src="./images/mail-with-circle.svg" alt="Email"></a>
+                <a href="https://www.linkedin.com/in/taryn-beaupre/"><img src="./images/linkedin-124.svg" alt="LinkedIn logo"></a>
+                <a href="https://github.com/TarynBeaupre"><img src="./images/github.svg" alt="GitHub logo"></a>
+            </div>
+            <small>Last Updated: <span id="last-updated"></span></small></br>
+            <small>© 2024 Taryn Beaupré </small>
         </div>
     </footer>
     

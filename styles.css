@@ -7,11 +7,19 @@ body {
     overflow-x: hidden;
     transition: background 3s ease-out;
     background: linear-gradient(to bottom,
-        #f0c97c 0%,
-        #d06f7c 25%,
-        #663998 45%,
-        #231c4c 100%); /* Sunset gradient at first */
+        #fad58b 0%,
+        #ef6d7f 20%,
+        #121858 40%,
+        #030539 100%); /* Sunset gradient at first */
     color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+strong {
+    color: #f29aa5;
 }
 
 body.scrolled {
@@ -32,11 +40,21 @@ body.scrolled .stars {
   }
 
 header {
+    z-index: 9999;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     position: fixed;
     width: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
     color: white;
     transition: transform 0.3s ease-in-out;
 }
+
+header.scrolled {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
 
 #menu-toggle {
     display: none;
@@ -53,12 +71,10 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.3);
     padding: 10px;
 }
 
 nav ul {
-
     list-style: none;
     padding: 0;
     display: flex;
@@ -153,7 +169,7 @@ nav ul li a {
 /* Round stars */
 .stars .round {
     position: absolute;
-    background-color: #a7a7a7;
+    background-color: rgba(255, 255, 255, 0.3);
     border-radius: 100%;
     width: 3px; /* Slightly larger round stars */
     height: 3px;
@@ -211,6 +227,8 @@ body.lightened section, body.lightened footer {
     color: #333;
 }
 
+
+
 /* About */
 .about .content{
     display: flex;
@@ -219,8 +237,6 @@ body.lightened section, body.lightened footer {
     justify-content: space-evenly;
 }
 .about img {
-    height: auto;
-    width: 40%;
     padding: 10px;
 }
 
@@ -246,7 +262,19 @@ section .image img{
 
 .techstack-list {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.skill {
+    font-size: 14px;
+    margin: 4px;
+    padding: 3px 5px;
+    border-radius: 3px;
+}
+
+.skill:hover {
+    transform: scale(1.05);
+
 }
 
 /* Experience */
@@ -262,15 +290,59 @@ section .image img{
 }
 
 .download-btn:hover {
-    background-color: #f0c97c;
+    background-color: #fad58b;
+    color: #444;
 }
 
 .download-btn:focus {
     outline: none;
 }
 
-/* END SECTIONS ========== */
+/* PROJECTS */
+.projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-evenly;
+}
+  
+.project {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    position: relative;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
 
+.project img {
+    transition: transform 0.3s;
+}
+
+.project-image {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    text-decoration: none;
+}
+
+.project:hover .project-overlay {
+    display: block;
+}
+
+/* FOOTER ========== */
 footer {
     display: flex;
     grid-template-columns: 1fr 1fr;
@@ -278,68 +350,50 @@ footer {
     justify-content: center;
     align-items: center;
     background: #0f021e;
+    padding-bottom: 20px;
 }
 
 footer * {
     text-align: center;
+
 }
 
-
-/* CAROUSEL DISPLAY ========== */
-.projects {
-    display: grid;
-    justify-content: center;
-    gap: 20px;
-}
-  
-.project {
-    background-color: rgba(255, 255, 255, 0.3);
-    padding: 20px;
-    border-radius: 8px;
-    min-width: 150px;
+footer small {
+    font-size: 10px;
 }
 
-.project-github-link img {
-   height: auto;
-   width: 30px;
-   margin-right: 10px;
-}
-
-.project-github-link {
+footer .contact {
+    margin-top: 20px;
     display: flex;
     align-items: center;
-    height: 40px;
-    color: white;
-    text-decoration: none;
+    justify-content: center;
 }
 
-/* END CAROUSEL ========== */
+footer .contact a {
+    margin: 10px;
+}
 
-/* Media Screen Resizing ========== */
-@media screen and (max-width: 768px) {
-    header {
-      transform: translateX(-100%);
-      width: 100%;
-    }
-  
-    header.open {
-      transform: translateX(0);
-    }
-  
-    #menu-toggle {
-      display: block;
-    }
-  
-    nav ul {
-      flex-direction: column;
-      display: none;
-    }
-  
-    nav ul.open {
-      display: flex;
-    }
-  
-    .hero {
-      margin-left: 0;
-    }
-  }
+footer .contact a img {
+    height: 30px;
+    width: 30px
+}
+
+.scroll-arrow {
+    margin-top: 10%;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    animation: hover 2s infinite;
+}
+
+.scroll-arrow svg {
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+}
+
+@keyframes hover {
+    0% {transform: translateY(-5px);}
+    50% {transform: translateY(5px);}
+    100% {transform: translateY(-5px);}
+}

@@ -1,17 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const menuToggle = document.getElementById('menu-toggle');
-    const nav = document.querySelector('nav ul');
     
-    // Last update
+    // Lastest update time
     const lastUpdated = document.getElementById('last-updated');
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
     lastUpdated.textContent = new Date().toLocaleDateString(undefined, options);
-  
-    // Nav bar burger menu toggle
-    menuToggle.addEventListener('click', () => {
-      nav.classList.toggle('open');
-      document.querySelector('header').classList.toggle('open');
-    });
   
     // Hero typing animation
     const texts = [
@@ -41,24 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
       totalDelay += text.length * 50 + 500;
     });
   
-    // Scroll-based background adjustment
-    const handleScroll = () => {
-        const scrollTop = window.scrollY;
-        const body = document.body;
-        const aboutSection = document.querySelector('.about'); // Assume `.about` is the class for the "About Me" section
-        const aboutBottom = aboutSection.getBoundingClientRect().bottom + scrollTop; // Position of the bottom of "About Me"
-    
-        const transitionPoint = aboutBottom; // Change background once "About Me" ends
-    
-        if (scrollTop >= transitionPoint) {
-          body.classList.add('scrolled');
-        } else {
-          body.classList.remove('scrolled');
-        }
-    };
-    
-    window.addEventListener('scroll', handleScroll);
-
     const downloadButton = document.getElementById('download-pdf');
     downloadButton.addEventListener('click', () => {
         const pdfUrl = './files/BeaupreTaryn.pdf';
@@ -67,7 +41,35 @@ document.addEventListener('DOMContentLoaded', () => {
         link.download = 'CV_Taryn_Beaupre.pdf';
         document.body.appendChild(link);
         link.click();
-        document.body.removeChild(link); // Remove the link after clicking to clean up
+        document.body.removeChild(link);
     });
-  });
+
+    const scrollArrow = document.querySelector('.scroll-arrow');
+
+    scrollArrow.addEventListener('click', () => {
+      const aboutSection = document.querySelector('.about');
+      const aboutTop = aboutSection.getBoundingClientRect().top - 70;
+    
+      if (window.scrollY + window.innerHeight >= document.body.offsetHeight) {
+        window.scrollTo({
+          top: aboutTop,
+          behavior: 'smooth'
+        });
+      } else {
+        window.scrollTo({
+          top: aboutSection.offsetTop - 70,
+          behavior: 'smooth'
+        });
+      }
+    });
+
+    document.addEventListener('scroll', () => {
+      
+        if (window.scrollY + window.innerHeight >= document.body.offsetHeight) {
+            scrollArrow.classList.add('active');
+        } else {
+            scrollArrow.classList.remove('active');
+        }
+    });
+});
   
